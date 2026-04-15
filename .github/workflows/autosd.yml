@@ -38,4 +38,4 @@ jobs:
           cache-save: ${{ github.event_name == 'push' }}
       - name: Bazel Build (basic)
         run: |
-          bazel build --config target_config_4 -- //:main_cpp //:main_pthread_cpp //:math_lib //:math_lib_shared
+          bazel build --lockfile_mode=error --config target_config_4 -- //:main_cpp //:main_pthread_cpp //:math_lib //:math_lib_shared
