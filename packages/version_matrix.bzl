@@ -73,6 +73,20 @@ VERSION_MATRIX = {
     #     "url": "https://www.qnx.com/download/download/79858/installation.tgz",
     #     "gcc_version": "12.2.0",
     # },
+    "aarch64-qnx-sdp_8.0.0": {
+        "build_file": "@score_bazel_cpp_toolchains//packages/qnx/SDP:BUILD",
+        "sha256": "",
+        "strip_prefix": "installation",
+        "url": "",
+        "gcc_version": "12.2.0",
+    },
+    "aarch64-qnx-sdp_8.0.3": {
+        "build_file": "@score_bazel_cpp_toolchains//packages/qnx/SDP:BUILD",
+        "sha256": "",
+        "strip_prefix": "installation",
+        "url": "",
+        "gcc_version": "12.2.0",
+    },
     # "aarch64-qnx-sdp_8.0.3": {
     #     "build_file": "@score_bazel_cpp_toolchains//packages/qnx/aarch64/sdp/8.0.0:sdp.BUILD",
     #     "sha256": "9039fd6a4a639f06ea977afb93963a6fe8f8c46db727066709370d999c7232e0",
