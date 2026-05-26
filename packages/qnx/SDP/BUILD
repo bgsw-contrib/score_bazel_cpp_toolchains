@@ -1,11 +1,12 @@
 # QNX SDP Distribution Build
 
-load("//:qnx_sdp.bzl", "qnx_sdp_distribution")
+load(":qnx_sdp.bzl", "qnx_sdp_distribution")
 
 # Create the QNX SDP distribution from the patchset file
 qnx_sdp_distribution(
     name = "qnx_sdp",
     patchset = "patchset-qnx803-virtio.plist",
+    qnxsoftwarecenter_clt = ":qnxsoftwarecenter_clt",
     visibility = ["//visibility:public"],
 )
 
@@ -23,5 +24,14 @@ filegroup(
     name = "qnx_sdp_files",
     srcs = [":qnx_sdp"],
     visibility = ["//visibility:public"],
+)
+
+# Local stub for qnxsoftwarecenter_clt so the package can be built inside this
+# repository for testing. Replace with the real installer binary when integrating
+# into a consuming workspace that provides @qnx_software_center.
+sh_binary(
+    name = "qnxsoftwarecenter_clt",
+    srcs = ["qnxsoftwarecenter_clt.sh"],
+    visibility = ["//visibility:private"],
 )
 
