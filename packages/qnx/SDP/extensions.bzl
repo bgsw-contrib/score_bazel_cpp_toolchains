@@ -12,6 +12,7 @@
 # *******************************************************************************
 
 """Bazel module extension for QNX repositories."""
+
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
 load("//:qnx_install.bzl", "qnx_software_center_repository")
 
