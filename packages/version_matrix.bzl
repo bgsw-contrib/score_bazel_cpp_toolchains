@@ -207,6 +207,13 @@ VERSION_MATRIX = {
     #     "url": "https://www.qnx.com/download/download/87174/installation_qnx_803_260305.tar.xz",
     #     "gcc_version": "12.2.0",
     # },
+    "x86_64-qnx-sdp_8.0.3": {
+        "build_file": "@score_bazel_cpp_toolchains//packages/qnx/SDP:BUILD",
+        "sha256": "",
+        "strip_prefix": "installation",
+        "url": "",
+        "gcc_version": "12.2.0",
+    },
     # SDP patchset distribution (local/virtio variant)
     "x86_64-qnx-sdp_8.0.3-virtio": {
         "build_file": "@score_bazel_cpp_toolchains//packages/qnx/SDP:BUILD",
