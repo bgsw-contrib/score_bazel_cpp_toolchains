@@ -71,7 +71,7 @@ jobs:
             --credential_helper=*.qnx.com="${QNX_CREDENTIAL_HELPER}" -- \
             //:all_tests
       - name: Setup latest QEMU
-        uses: bgsw-contrib/score_cicd-actions/setup-qemu-latest@main
+        uses: eclipse-score/score_cicd-actions/setup-qemu-latest@main
         with:
           qemu-targets: aarch64-softmmu,x86_64-softmmu
           extra-build-deps: libattr1-dev libffi-dev
