@@ -14,10 +14,10 @@
 """ Module extension for setting up GCC toolchains in Bazel.
 """
 
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@score_bazel_cpp_toolchains//packages:version_matrix.bzl", "VERSION_MATRIX")
 load("@score_bazel_cpp_toolchains//rules:common.bzl", "QNX_SDP_TO_GCC_VERSION", "SDP_VERSION_MAPPING")
 load("@score_bazel_cpp_toolchains//rules:gcc.bzl", "gcc_toolchain")
+load("@score_bazel_cpp_toolchains//rules:http_archive.bzl", "http_archive")
 
 # Constants
 _PACKAGE_SUFFIX = "_pkg"
